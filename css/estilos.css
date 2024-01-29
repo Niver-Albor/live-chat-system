@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html, body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: #f2f2f2;
+}
+body{
+    /* margin-top: 10px; */
+}
+.wrapper{
+    width: 400px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
+}
+.wrapper .titulo{
+    font-size: 30px;
+    font-weight: 600px;
+    text-align: center;
+    line-height: 100px;
+    background: linear-gradient(145deg, #41d06c 10%, #41cbd0 90%);
+    user-select: none;
+    border-radius: 15px 15px 0 0;
+}
+.wrapper form{
+    padding: 10px 30px 50px 30px;
+}
+.wrapper form .campo{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+.wrapper form .campo input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border-radius: 15px;
+    font-size: 20px;
+    padding-left: 20px;
+    border: 1px solid grey;
+    transition: all 0.3s ease;
+}
+.wrapper form .campo label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: rgb(185, 185, 185);
+    font-weight: 400;
+    font-size: 20px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+form .campo input:focus ~ label,
+form .campo input:valid ~ label{
+    top: 0%;
+    font-size: 15px;
+    color: #41cbd0;
+    background: #fff;
+    transform: translateY(-50%);
+}
+form .campo input[type='submit'],
+form .campo button{
+    border: none;
+    padding-left: 0;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #41d06c;
+    transition: all 0.3s ease;
+}
+form .campo button{
+    border-radius: 15px;
+    width: 200px;
+    height: 100%;
+    font-size: 20px;
+    background: #41cbd0;
+    transition: all 0.3s ease;
+}
+form .campo button:hover{
+    background: #41d06c;
+    opacity: 75%;
+}
+form .campo input[type='submit']:hover{
+    opacity: 75%;
+    background: #41cbd0;
+    height: 55px;
+}
+form .campo .archivo{
+    display: none;
+}
+form .enlace {
+    margin-top: 20px;
+    text-align: center;
+}
+form .enlace a{
+    color: #4158d0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+form .enlace a:hover{
+    text-decoration: underline;
+    font-size: 17px;
+}
+
+.wrapper .info-usuario header,
+.wrapper .info-chat header{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    border-radius: 15px 15px 0px 0px;
+    padding-bottom: 5px;
+    background: linear-gradient(145deg, #41d06c 10%, #41cbd0 90%);
+}
+.wrapper .info-chat header{
+    height: 80px;
+}
+.wrapper .info-chat .info-usuario .nombre-usuario,
+.wrapper .info-usuario .contenido p{
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.wrapper .info-chat header{
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+.wrapper .info-usuario .imagen{
+    width: 100px;
+    height: 100px;
+    box-shadow: 15px 0px 15px rgba(0, 0, 0, 0.1);
+}
+.wrapper .info-chat .imagen{
+    width: 75px;
+    height: 75px;
+    box-shadow: 15px 0px 15px rgba(0, 0, 0, 0.1);
+}
+.wrapper .info-usuario .imagen img,
+.wrapper .info-chat .imagen img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 0px 0px 0px;
+}
+.wrapper .info-chat .info-usuario{
+    padding-top: 10px;
+}
+.wrapper .info-usuario .contenido{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: left;
+    padding-left: 10px;
+}
+.wrapper .catalogo{
+    padding: 5px;
+    padding-top: 10px;
+}
+.wrapper .catalogo button{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.wrapper .catalogo button:hover{
+    cursor: pointer;
+}
+.wrapper .catalogo .imagen{
+    height: 100px;
+    width: 100px;
+}
+.wrapper .catalogo .imagen img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.wrapper .catalogo .contenido .on{
+   background-color: rgb(21, 197, 21);
+}
+
+.wrapper .bandeja{
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 500px;
+    overflow-y:auto;
+}
+.wrapper .bandeja .mensaje {
+    text-align: left;
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 5px;
+    position: relative;
+    z-index: 1;
+}
+.wrapper .bandeja .enviado {
+    background: #41d06c;
+    margin-left: 50px;
+}
+.wrapper .bandeja .recibido {
+    background: #41cbd0;
+    margin-right: 50px;
+}
+
+.wrapper .escritura{
+    height: 50px;
+}
+.wrapper .escritura form{
+    display: grid;
+    grid-template-columns: 1fr 0.15fr;
+    height: 100%;
+}
+.wrapper .escritura form{
+    padding: 0;
+    height: 100%;
+    border-radius: 15px;
+}
+.wrapper .escritura form input[type='text']{
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    text-align: left;
+    border-radius: 15px 0px 0px 15px;
+}
+.wrapper .escritura form .enviar{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 15px 15px 0px;
+    background: linear-gradient(145deg, #41d06c 10%, #41cbd0 90%);
+
+}
+
+.boton-eliminar{
+    background-color: red;
+    text-align: center;
+    color: white;
+    border: none;
+}
+.boton-eliminar:hover{
+    cursor: pointer;
+}

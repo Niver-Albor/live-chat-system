@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Usuarios</title>
+</head>
+<body>
+    <div class="wrapper">
+        <section class="info-usuario">
+            <header>
+                <div class="imagen">
+                    <img src="../php/negro.png" alt="">
+                </div>
+                <div class="contenido">
+                    <p>Nombre de usuario</p>
+                    <p>En linea</p>
+                </div>
+                <div>
+                    <button>
+                        Cerrar sesion
+                    </button>
+                </div>
+            </header>
+        </section>
+        <section class="catalogo">
+            <button class="usuario-boton" value="4">
+                <div class="imagen">
+                    <img src="../php/negro.png" alt="">
+                </div>
+                <div class="contenido">
+                    <p>Nombre de usuario</p>
+                    <p class="on">En linea</p>
+                    <p>Mensaje sin leer</p>
+                </div>
+            </button>
+            <button class="usuario-boton" value="4">
+                <div class="imagen">
+                    <img src="../php/piolin.jpeg" alt="">
+                </div>
+                <div class="contenido">
+                    <p>Nombre de usuario</p>
+                    <p>En linea</p>
+                </div>
+            </button>
+        </section>
+    </div>
+
+    <form action="chat.html" method="post">
+        <input type="hidden" name="oyente_ID" id="form-chat" value="">
+    </form>
+
+    <script>
+        let botones = Array.from(document.getElementsByClassName('usuario-boton'));
+        let form = document.getElementById('form-chat');
+        botones.forEach((boton, i) => {
+            boton.addEventListener('click', function(){
+                alert(boton.value);
+                // form.elements['oyente_ID'].value = boton.value;
+                // form.submit();
+            });
+        });
+    </script>
+</body>
+</html>
